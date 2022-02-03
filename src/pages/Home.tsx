@@ -1,13 +1,13 @@
-import YIEButton from "../YIEUI/YIEButton"
+import Features from "./Features";
+import Hero from "./Hero";
 
 const Home = () => {
-    return (
-        <div>
-            Home Page
-            <YIEButton content="Button One" bgColor="red" />
-            <YIEButton content="Button One" bgColor="blue" />
-        </div>
-    )
-}
+  return (
+    <div>
+      <Hero />
+      <Features />
+    </div>
+  );
+};
 
-export default Home
+export default Home;
