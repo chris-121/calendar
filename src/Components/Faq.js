@@ -48,15 +48,15 @@ const Faq = () => {
 
  
   return (
-    <div style={{backgroundColor: '#EEF3FC'}} className="px-32 py-20">
+    <div style={{backgroundColor: '#EEF3FC'}} className="md:px-32 md:py-20">
       <h1 className="text-4xl font-bold text-center mb-5">FAQ's</h1>
-      <div className="grid grid-cols-2 gap-3">
-      <div className="accordion bg-white">
+      <div style={{flexBasis:'content-fit'}} className="grid sm:grid-cols-1 md:grid-cols-2 gap-3">
+      <div className="h-auto bg-white">
         {accordionData1.map(({ title, content }) => (
           <Accordion title={title} content={content} />
         ))}
       </div>
-      <div className="accordion bg-white">
+      <div className="h-auto bg-white">
         {accordionData2.map(({ title, content }) => (
           <Accordion title={title} content={content} />
         ))}
