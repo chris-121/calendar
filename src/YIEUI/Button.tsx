@@ -1,6 +1,9 @@
 import React from "react";
 
-const Button = ({ children, variant }) => {
+type ButtonProps = {
+  variant: "primary" | "secondary" | "success" | "error";
+} & React.ComponentProps<"button">;
+const Button = ({ children, variant, ...rest }: ButtonProps) => {
   let classes;
 
   // More variant can be added like secondary
@@ -10,7 +13,9 @@ const Button = ({ children, variant }) => {
   }
   return (
     <div>
-      <button className={classes}>{children}</button>
+      <button className={classes} {...rest}>
+        {children}
+      </button>
     </div>
   );
 };

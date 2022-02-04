@@ -10,10 +10,10 @@ const Hero = () => {
         <h2 className="leading-10 text-center md:text-left font-normal text-blue-900 xl:text-5xl md:text-4xl text-4xl md:w-3/4 mt-5 ">
           Redefine Learning making it Fun and Affordable
         </h2>
-        <Button>Get Started</Button>
+        <Button variant="primary">Get Started</Button>
       </div>
       <div className="row-start-1 md:col-end-3">
-        <ImgCard src={bannerImg} />
+        <ImgCard classes="" src={bannerImg} />
       </div>
     </div>
   );
