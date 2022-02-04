@@ -37,5 +37,8 @@
     "start": "webpack serve"
   },
   "author": "Devesh Nene",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "react-icons": "^4.3.1"
+  }
 }
