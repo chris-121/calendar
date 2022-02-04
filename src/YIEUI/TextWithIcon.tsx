@@ -1,5 +1,13 @@
 import React from "react";
 
+type TextWithIconProps = {
+  text: string;
+  textClasses: string;
+  iconClasses: string;
+  iconWidth: string;
+  classes: string;
+  icon: React.ReactNode;
+};
 const TextWithIcon = ({
   text,
   textClasses,
@@ -7,7 +15,7 @@ const TextWithIcon = ({
   iconClasses,
   iconWidth,
   classes,
-}) => {
+}: TextWithIconProps) => {
   return (
     <div style={{ display: "flex", alignItems: "center" }} className={classes}>
       <span

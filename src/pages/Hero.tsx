@@ -13,7 +13,7 @@ const Hero = () => {
         <Button variant="primary">Get Started</Button>
       </div>
       <div className="row-start-1 md:col-end-3">
-        <ImgCard classes="" src={bannerImg} />
+        <ImgCard src={bannerImg} />
       </div>
     </div>
   );
