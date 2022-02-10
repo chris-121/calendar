@@ -20,7 +20,7 @@ const LibrarySubject = () => {
             </div>
           </td>
           <td className='py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white'>
-            <span className='mx-2'>{topic.report}</span>
+            <span className='mx-2 underline text-blue-400'>{topic.report}</span>
           </td>
           <td className='py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white'>
             <span className='mx-2'>{topic.aggregate}%</span>

@@ -78,7 +78,6 @@ const Library = () => {
                 className='bg-blue-600 h-2.5 rounded-full'
                 style={{ width: `${course.completionPercent}%` }}></div>
             </div>
-
             <span className='mx-2'>{course.completionPercent}%</span>
           </td>
         </tr>

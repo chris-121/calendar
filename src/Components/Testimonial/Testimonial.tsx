@@ -24,7 +24,7 @@ const Testimonial = () => {
   //---------------------------/
 
   return (
-    <div className='testimonial_container h-80 flex  items-center justify-evenly w-full flex-wrap'>
+    <div className='testimonial_container h-80 flex  items-center justify-evenly w-full flex-wrap '>
       {testimonials.map((testimonial) => {
         return (
           <div className='m-5 max-w-xs min-w-[200px]'>
