@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-const Library = () => {
+import Sidebar from "../../../Components/Sidebar";
+const Library = ({ menuOpen }) => {
   // data----------------------------------------------------->
   const [courses, setCourses] = useState([
     {
@@ -89,6 +90,7 @@ const Library = () => {
 
   return (
     <div className="m-4">
+      <Sidebar menuOpen={menuOpen} />
       <h1 className="text-center font-bold text-3xl">Student Dashboard</h1>
       <div className="flex flex-col max-w-[95vw]">
         <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
