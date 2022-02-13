@@ -3,6 +3,9 @@ import { useState } from "react";
 import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import ClassStatus from "./pages/AdminDashboard/Library/ClassStatus";
 import Completion from "./pages/AdminDashboard/Library/Completion";
+import CreateContent from "./pages/AdminDashboard/Library/CreateContent";
+import StudentProfile from "./pages/AdminDashboard/Library/StudentProfile";
+import TeacherProfile from "./pages/AdminDashboard/Library/TeacherProfile";
 import Home from "./pages/Home";
 import Library from "./pages/StudentDashboard/Library/Library";
 import LibrarySubject from "./pages/StudentDashboard/Library/LibrarySubject";
@@ -54,6 +57,14 @@ function App() {
           path="/classStatus"
           element={<ClassStatus menuOpen={menuOpen} toggleMenu={toggleMenu} />}
         />
+        <Route
+          path="/teacherStatus"
+          element={
+            <StudentProfile menuOpen={menuOpen} toggleMenu={toggleMenu} />
+          }
+        />
+        <Route path="/teacherProfile" element={<TeacherProfile />} />
+        <Route path="/createContent" element={<CreateContent />} />
       </Routes>
     </Router>
   );

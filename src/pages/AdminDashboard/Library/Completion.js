@@ -120,6 +120,7 @@ const Completion = ({ menuOpen }) => {
           <ShowCompletionData
             cols={aggCols}
             rows={aggData}
+            type="aggregate"
             classes="col-span-2 "
           />
         </div>

@@ -1,9 +1,51 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import LibraryFilter from "../../../Components/LibraryFilter";
+import SelectInput from "../../../Components/SelectInput";
+import { schoolClasses, sections, subjects } from "../../../dummyData";
 import src from "../../../images/chart.png";
 import Button from "../../../YIEUI/Button";
+import ShowCompletionData from "./ShowCompletionData";
 
 const ClassStatus = () => {
+  const navigate = useNavigate();
+  const cols = [
+    { name: "Type" },
+    { name: "Completion" },
+    { name: "Class Report" },
+    { name: "Students" },
+  ];
+
+  const rows = [
+    {
+      id: 1,
+      type: "Content 1",
+      completion: "50%",
+      classReportLink: "/classReport",
+      studentsLink: "/studentList",
+    },
+    {
+      id: 2,
+      type: "Content 1",
+      completion: "50%",
+      classReportLink: "/classReport",
+      studentsLink: "/studentList",
+    },
+    {
+      id: 3,
+      type: "Content 1",
+      completion: "50%",
+      classReportLink: "/classReport",
+      studentsLink: "/studentList",
+    },
+    {
+      id: 4,
+      type: "Content 1",
+      completion: "50%",
+      classReportLink: "/classReport",
+      studentsLink: "/studentList",
+    },
+  ];
   return (
     <div className="p-5">
       <div className="grid grid-cols-3 gap-5">
@@ -19,10 +61,36 @@ const ClassStatus = () => {
               <p>Class Average = 65%</p>
               <p>Teacher: Lorem Ipsum</p>
               <p className="inline-block mr-10">Teacher Content profile</p>
-              <Button classes="inline-block" variant="filter">
+              <Button
+                onClick={() => navigate("/teacherStatus")}
+                classes="inline-block"
+                variant="filter"
+              >
                 Go
               </Button>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* completion data */}
+      <div className="grid grid-cols-3 mt-5 gap-3">
+        <ShowCompletionData
+          classes="col-span-2"
+          type="classStatus"
+          cols={cols}
+          rows={rows}
+        />
+        {/*  student profile */}
+        <div className="border border-black mt-4 rounded-md">
+          <p className="-mt-3 bg-white w-max mx-3 px-2">Student Profile</p>
+          <div className="p-4 pt-0 ">
+            <SelectInput values={schoolClasses} />
+            <SelectInput values={subjects} />
+            <SelectInput values={sections} />
+            <Button classes="mt-4" variant="outlined">
+              Get Student Profile
+            </Button>
           </div>
         </div>
       </div>

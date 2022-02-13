@@ -1,7 +1,13 @@
 import React from "react";
 
 type ButtonProps = {
-  variant: "primary" | "secondary" | "success" | "error" | "filter";
+  variant:
+    | "primary"
+    | "secondary"
+    | "success"
+    | "error"
+    | "filter"
+    | "outlined";
   classes: string;
 } & React.ComponentProps<"button">;
 const Button = ({ classes, children, variant, ...rest }: ButtonProps) => {
@@ -15,6 +21,9 @@ const Button = ({ classes, children, variant, ...rest }: ButtonProps) => {
     btnClasses = "bg-yellow-200 py-1 px-4 rounded-md hover:bg-yellow-300";
   } else if (variant === "filter") {
     btnClasses = "bg-gray-200 py-1 px-3 rounded-sm ";
+  } else if (variant === "outlined") {
+    btnClasses =
+      "border py-2 text-gray-500 rounded-md border-black hover:border-gray-400 hover:text-black w-full";
   }
   return (
     <div className={classes}>

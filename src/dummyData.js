@@ -49,8 +49,17 @@ export const assesments = [
   },
 ];
 
-export const sections = ["A", "B", "C"];
-export const fileTypes = ["PDF", "JPG", "WORD", "PPTX"];
+export const sections = [
+  { value: "Select Section" },
+  { value: "A" },
+  { value: "B" },
+  { value: "C" },
+];
+export const fileTypes = [
+  { value: "Select Type of File" },
+  { value: "doc" },
+  { value: "pdf" },
+];
 
 export const schoolClasses = [
   { value: "Select Class" },
@@ -67,3 +76,7 @@ export const subjects = [
   { value: "English" },
   { value: "Hindi" },
 ];
+
+export const studentSubjects = ["Math", "Science", "English", "Hindi"];
+
+export const teacherClass = ["2", "4", "8"];
