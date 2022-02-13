@@ -1,6 +1,7 @@
 import React from "react";
 import SelectInput from "../../../Components/SelectInput";
 import { fileTypes, schoolClasses, subjects } from "../../../dummyData";
+import Button from "../../../YIEUI/Button";
 
 const CreateContent = () => {
   return (
@@ -33,10 +34,10 @@ const CreateContent = () => {
 
             {/* notify options */}
 
-            <fieldset>
+            <fieldset className="flex my-4">
               <legend class="sr-only">Checkbox variants</legend>
 
-              <div class="flex items-center mb-4">
+              <div class="flex items-center mb-4 mr-4">
                 <input
                   id="checkbox-2"
                   aria-describedby="checkbox-2"
@@ -47,7 +48,7 @@ const CreateContent = () => {
                   for="checkbox-2"
                   class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300"
                 >
-                  I want to get promotional offers
+                  Notify Class ?
                 </label>
               </div>
               <div class="flex items-center mb-4">
@@ -61,12 +62,16 @@ const CreateContent = () => {
                   for="checkbox-3"
                   class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300"
                 >
-                  I am 18 years or older
+                  Notify Teacher ?
                 </label>
               </div>
             </fieldset>
 
             {/* notify options */}
+
+            <Button classes="w-1/2" variant="outlined">
+              Upload
+            </Button>
           </div>
         </div>
       </div>
