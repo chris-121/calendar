@@ -1,6 +1,7 @@
 import "flowbite";
 import { useState } from "react";
 import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
+import ClassStatus from "./pages/AdminDashboard/Library/ClassStatus";
 import Completion from "./pages/AdminDashboard/Library/Completion";
 import Home from "./pages/Home";
 import Library from "./pages/StudentDashboard/Library/Library";
@@ -48,6 +49,10 @@ function App() {
         <Route
           path="/completion"
           element={<Completion menuOpen={menuOpen} toggleMenu={toggleMenu} />}
+        />
+        <Route
+          path="/classStatus"
+          element={<ClassStatus menuOpen={menuOpen} toggleMenu={toggleMenu} />}
         />
       </Routes>
     </Router>

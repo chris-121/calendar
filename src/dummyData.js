@@ -12,7 +12,6 @@ export const menus = [
   { title: "Notices", url: "/notices" },
 ];
 
-export const subjects = ["Science", "Math"];
 export const classesList = [9, 10];
 export const teachers = [
   { id: 1, name: "Teacher 1" },
@@ -52,3 +51,19 @@ export const assesments = [
 
 export const sections = ["A", "B", "C"];
 export const fileTypes = ["PDF", "JPG", "WORD", "PPTX"];
+
+export const schoolClasses = [
+  { value: "Select Class" },
+  { value: "2" },
+  { value: "3" },
+  { value: "4" },
+  { value: "5" },
+];
+
+export const subjects = [
+  { value: "Select Subject" },
+  { value: "Math" },
+  { value: "Science" },
+  { value: "English" },
+  { value: "Hindi" },
+];
