@@ -33,12 +33,12 @@ const StudentProfile = ({ teacherName }) => {
         {/* student profile */}
 
         <div className="border border-black p-3 rounded-md ">
-          {/* teacher name */}
+          {/* student name */}
           <div className="grid grid-cols-3">
             <p>Student Name:</p>
             <p className="col-span-2 text-left"> {teacherName || "null"}</p>
           </div>
-          {/* subjects that he/she teaches */}
+          {/* overall average */}
           <div className="grid grid-cols-3">
             <p>Overall Average:</p>
             <p className="col-span-2">79</p>
@@ -52,7 +52,7 @@ const StudentProfile = ({ teacherName }) => {
               ))}
             </p>
           </div>
-          {/* on which classes he/she takes class */}
+          {/* on which classes he/she reads */}
           <div className="grid grid-cols-3">
             <p>Class:</p>
             <p className="col-span-2">7</p>
