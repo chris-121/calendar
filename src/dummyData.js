@@ -80,3 +80,9 @@ export const subjects = [
 export const studentSubjects = ["Math", "Science", "English", "Hindi"];
 
 export const teacherClass = ["2", "4", "8"];
+
+export const departments = [
+  { value: "Select Department" },
+  { value: "Department-1" },
+  { value: "Department-2" },
+];

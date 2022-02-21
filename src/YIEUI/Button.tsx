@@ -7,7 +7,8 @@ type ButtonProps = {
     | "success"
     | "error"
     | "filter"
-    | "outlined";
+    | "outlined"
+    | "navigation";
   classes: string;
 } & React.ComponentProps<"button">;
 const Button = ({ classes, children, variant, ...rest }: ButtonProps) => {
@@ -24,6 +25,9 @@ const Button = ({ classes, children, variant, ...rest }: ButtonProps) => {
   } else if (variant === "outlined") {
     btnClasses =
       "border py-2 text-gray-500 rounded-md border-black hover:border-gray-400 hover:text-black w-full";
+  } else if (variant === "navigation") {
+    btnClasses =
+      "py-2 px-4 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white ml-1";
   }
   return (
     <div className={classes}>
