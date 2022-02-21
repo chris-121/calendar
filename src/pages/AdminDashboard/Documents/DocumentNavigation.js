@@ -5,7 +5,7 @@ import Button from "../../../YIEUI/Button";
 const DocumentNavigation = () => {
   const navigate = useNavigate();
   return (
-    <div class="flex pt-5  mx-auto w-3/4 justify-center" role="group">
+    <div class="flex pt-5  mx-auto w-3/4 justify-center mb-5" role="group">
       <Button variant="navigation" onClick={() => navigate("/documents")}>
         Academic
       </Button>
