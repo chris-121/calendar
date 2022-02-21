@@ -2,14 +2,14 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import DocumentNavigation from "./DocumentNavigation";
 
-const Documents = () => {
+const StudentDocuments = () => {
   return (
     <div>
-      <h2 className="text-4xl text-center mt-5">School Admin Dashboard</h2>
+      <h2 className="text-4xl text-center mt-5">Student Dashboard</h2>
       <DocumentNavigation />
       <Outlet />
     </div>
   );
 };
 
-export default Documents;
+export default StudentDocuments;

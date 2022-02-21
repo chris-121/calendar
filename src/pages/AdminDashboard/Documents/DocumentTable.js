@@ -30,12 +30,12 @@ const DocumentTable = ({ cols, rows }) => {
                       {row.doc}
                     </td>
 
-                    <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
+                    <td class="py-4 px-6 text-sm font-medium  whitespace-nowrap">
                       <a
                         href={row.link}
                         class="text-blue-600 dark:text-blue-500 hover:underline"
                       >
-                        Edit
+                        link
                       </a>
                     </td>
                   </tr>
