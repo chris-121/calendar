@@ -6,7 +6,7 @@ import Hero from "./Hero";
 
 const Home = () => {
   return (
-    <div className="">
+    <div>
       <Hero />
       <Features />
       <Achievements />

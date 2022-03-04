@@ -1,12 +1,20 @@
 import React from "react";
+import { AiOutlineMenu } from "react-icons/ai";
 import { Link, NavLink } from "react-router-dom";
 import { menus } from "../dummyData";
 import logo from "../logo.png";
 
-export default function Sidebar({ menuOpen, classes }) {
+export default function Sidebar({sidebarOpen, setSidebarOpen}) {
+  
   return (
-    <div
-      className={`${menuOpen ? "w-64" : "w-0"} space-y-4 border-r ${classes}`}
+    <div>
+      {/* sidebar toggler icon */}
+   <div className="p-5 text-4xl ">
+   <AiOutlineMenu onClick={() => sidebarOpen === false ? setSidebarOpen(true):setSidebarOpen(false)}/>
+   </div>
+      {/* sidebar */}
+      <div
+      className={`${sidebarOpen ? "w-1/5 block" : "w-0 hidden"} space-y-4 border-r `}
     >
       <div className="flex justify-between items-center p-4 mb-6 ">
         <Link to="/">
@@ -62,6 +70,7 @@ export default function Sidebar({ menuOpen, classes }) {
             </NavLink>
           ))}
       </div>
+    </div>
     </div>
   );
 }

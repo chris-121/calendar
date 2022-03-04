@@ -1,6 +1,7 @@
 import "flowbite";
 import { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Navbar from "./Components/Navbar/Navbar";
 import Academic from "./pages/AdminDashboard/Documents/Academic";
 import AddDocument from "./pages/AdminDashboard/Documents/AddDocument";
 import AdminDocuments from "./pages/AdminDashboard/Documents/AdminDocuments";
@@ -11,12 +12,14 @@ import Completion from "./pages/AdminDashboard/Library/Completion";
 import CreateContent from "./pages/AdminDashboard/Library/CreateContent";
 import StudentProfile from "./pages/AdminDashboard/Library/StudentProfile";
 import TeacherProfile from "./pages/AdminDashboard/Library/TeacherProfile";
+import Home from "./pages/Home";
 import StudentAcademic from "./pages/StudentDashboard/Documents/StudentAcademic";
 import StudentAdminstration from "./pages/StudentDashboard/Documents/StudentAdminstration";
 import StudentDocuments from "./pages/StudentDashboard/Documents/StudentDocuments";
 import StudentPersonal from "./pages/StudentDashboard/Documents/StudentPersonal";
 import Library from "./pages/StudentDashboard/Library/Library";
 import LibrarySubject from "./pages/StudentDashboard/Library/LibrarySubject";
+import StudentDashboard from "./pages/StudentDashboard/StudentDashboard/StudentDashboard";
 import TeacherAcademic from "./pages/TeacherDashboard/TeacherDocuments/TeacherAcademic";
 import TeacherAdminstration from "./pages/TeacherDashboard/TeacherDocuments/TeacherAdminstration";
 import TeacherDocuments from "./pages/TeacherDashboard/TeacherDocuments/TeacherDocuments";
@@ -29,8 +32,14 @@ function App() {
   };
   return (
     <Router>
+      <Navbar/>
       <Routes>
-        <Route path="/" element={<TeacherDocuments />} />
+
+        {/* home route */}
+        <Route path="/" element={<Home />} />
+
+        {/* student routes */}
+        <Route path="/studentDashboard" element={<StudentDashboard/>}/>
         <Route
           path="/studentLibrary"
           element={<Library menuOpen={menuOpen} toggleMenu={toggleMenu} />}
