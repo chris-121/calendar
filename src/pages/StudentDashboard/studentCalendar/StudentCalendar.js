@@ -1,9 +1,9 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import CalendarComponent from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import { Link, Outlet } from "react-router-dom";
-import "../calendar.css";
-import axios from 'axios';
+import "./calendar.css";
 
 function StudentCalendar(){
 

@@ -12,19 +12,23 @@ import Completion from "./pages/AdminDashboard/Library/Completion";
 import CreateContent from "./pages/AdminDashboard/Library/CreateContent";
 import TeacherProfile from "./pages/AdminDashboard/Library/TeacherProfile";
 import Home from "./pages/Home";
+import CompletedAssessment from "./pages/StudentDashboard/Assessment/CompleteAssesment";
+import StudentAssessment from "./pages/StudentDashboard/Assessment/StudentAssessment";
 import StudentAcademic from "./pages/StudentDashboard/Documents/StudentAcademic";
 import StudentAdminstration from "./pages/StudentDashboard/Documents/StudentAdminstration";
 import StudentDocuments from "./pages/StudentDashboard/Documents/StudentDocuments";
 import StudentPersonal from "./pages/StudentDashboard/Documents/StudentPersonal";
 import Library from "./pages/StudentDashboard/Library/Library";
 import LibrarySubject from "./pages/StudentDashboard/Library/LibrarySubject";
+import StudentCalendar from "./pages/StudentDashboard/studentCalendar/StudentCalendar";
 import StudentDashboard from "./pages/StudentDashboard/StudentDashboard/StudentDashboard";
+import StudentFee from "./pages/StudentDashboard/StudentFee/StudentFee";
 import StudentProfile from "./pages/StudentDashboard/StudentProfile/StudentProfile";
+import StudentAssesReport from "./pages/StudentDashboard/StudentReports/StudentAssesReport";
 import TeacherAcademic from "./pages/TeacherDashboard/TeacherDocuments/TeacherAcademic";
 import TeacherAdminstration from "./pages/TeacherDashboard/TeacherDocuments/TeacherAdminstration";
 import TeacherDocuments from "./pages/TeacherDashboard/TeacherDocuments/TeacherDocuments";
 import TeacherPersonal from "./pages/TeacherDashboard/TeacherDocuments/TeacherPersonal";
-
 function App() {
   const [menuOpen, setMenuOpen] = useState(true);
   const toggleMenu = () => {
@@ -51,8 +55,42 @@ function App() {
         />
         <Route
           path="/studentDashboard/studentLibrary"
-          element={<Library menuOpen={menuOpen} toggleMenu={toggleMenu} />}
+          element={<Library/>}
         />
+        <Route
+          path="/studentDashboard/studentAssessment"
+          element={<StudentAssessment />}
+        />
+        <Route
+          path="/studentDashboard/studentCompletedAssessment"
+          element={<CompletedAssessment />}
+        />
+        <Route
+          path="/studentDashboard/studentCalender"
+          element={<StudentCalendar />}
+        />
+        <Route
+          path="/studentDashboard/studentAccessReport"
+          element={<StudentAssesReport />}
+        />
+        <Route
+          path="/studentDashboard/studentFee"
+          element={<StudentFee />}
+        />
+        <Route
+          path="/studentDashboard/studentDocuments"
+          element={<StudentDocuments />}
+        >
+        <Route path="/studentDashboard/studentDocuments/academic" element={<StudentAcademic />} />
+          <Route
+            path="/studentDashboard/studentDocuments/personal"
+            element={<StudentPersonal />}
+          />
+          <Route
+            path="/studentDashboard/studentDocuments/adminstration"
+            element={<StudentAdminstration />}
+          />
+          </Route>
         </Route>
 
         
@@ -89,18 +127,7 @@ function App() {
           <Route path="/adminDocuments/addDocument" element={<AddDocument />} />
         </Route>
 
-        {/* student document routes */}
-        <Route path="/studentDocuments" element={<StudentDocuments />}>
-          <Route path="/studentDocuments" element={<StudentAcademic />} />
-          <Route
-            path="/studentDocuments/personal"
-            element={<StudentPersonal />}
-          />
-          <Route
-            path="/studentDocuments/adminstration"
-            element={<StudentAdminstration />}
-          />
-        </Route>
+        
 
         {/* teacher document routes */}
         <Route path="/teacherDocuments" element={<TeacherDocuments />}>

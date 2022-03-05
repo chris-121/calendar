@@ -3,7 +3,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../images/logo.png";
 
-export default function Sidebar({sidebarOpen, setSidebarOpen}) {
+export default function TeacherSidebar({sidebarOpen, setSidebarOpen}) {
   const menus = [
     { title: "User Profile", url: "/studentDashboard/studentProfile" },
     { title: "Library", url: "/studentDashboard/studentLibrary" },

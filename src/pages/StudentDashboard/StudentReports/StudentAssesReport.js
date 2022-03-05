@@ -1,6 +1,6 @@
 import React from "react";
-import StudentAssesReportApi from "../../StudentApi/StudentAssesReportApi";
 import { Link } from "react-router-dom";
+import StudentAssesReportApi from "../../../StudentApi/StudentAssesReportApi";
 const StudentAssesReport = () => {
    
   return (
