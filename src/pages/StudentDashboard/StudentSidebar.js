@@ -1,11 +1,11 @@
 import React from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { Link, NavLink } from "react-router-dom";
-import logo from "../logo.png";
+import logo from "../../images/logo.png";
 
 export default function Sidebar({sidebarOpen, setSidebarOpen}) {
   const menus = [
-    { title: "User Profile", url: "/studentProfile" },
+    { title: "User Profile", url: "/studentDashboard/studentProfile" },
     { title: "Attendance", url: "/attendance" },
     { title: "Library", url: "/library" },
     { title: "Assessment", url: "/assessment" },

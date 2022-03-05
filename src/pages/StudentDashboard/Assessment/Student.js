@@ -1,8 +1,7 @@
-import React, { useState } from "react";
-import StudentApi from "../../Api/StudentApi";
+import React from "react";
 import { Link } from "react-router-dom";
+import { studentApi } from "../../../Api/StudentApi";
 const Student = () => {
-  const [data, setData] = useState(StudentApi);
   return (
     <div className="border border-black w-[85%] block my-2 mx-auto lg:w-[62%] ">
       <div className="my-2">
@@ -42,7 +41,7 @@ const Student = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    {data.map((val) => {
+                    {studentApi.map((val) => {
                       return (
                         <>
                           <tr key={val.id} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">

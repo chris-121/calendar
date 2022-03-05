@@ -10,7 +10,6 @@ import Personal from "./pages/AdminDashboard/Documents/Personal";
 import ClassStatus from "./pages/AdminDashboard/Library/ClassStatus";
 import Completion from "./pages/AdminDashboard/Library/Completion";
 import CreateContent from "./pages/AdminDashboard/Library/CreateContent";
-import StudentProfile from "./pages/AdminDashboard/Library/StudentProfile";
 import TeacherProfile from "./pages/AdminDashboard/Library/TeacherProfile";
 import Home from "./pages/Home";
 import StudentAcademic from "./pages/StudentDashboard/Documents/StudentAcademic";
@@ -20,6 +19,7 @@ import StudentPersonal from "./pages/StudentDashboard/Documents/StudentPersonal"
 import Library from "./pages/StudentDashboard/Library/Library";
 import LibrarySubject from "./pages/StudentDashboard/Library/LibrarySubject";
 import StudentDashboard from "./pages/StudentDashboard/StudentDashboard/StudentDashboard";
+import StudentProfile from "./pages/StudentDashboard/StudentProfile/StudentProfile";
 import TeacherAcademic from "./pages/TeacherDashboard/TeacherDocuments/TeacherAcademic";
 import TeacherAdminstration from "./pages/TeacherDashboard/TeacherDocuments/TeacherAdminstration";
 import TeacherDocuments from "./pages/TeacherDashboard/TeacherDocuments/TeacherDocuments";
@@ -34,16 +34,28 @@ function App() {
     <Router>
       <Navbar/>
       <Routes>
+      
 
         {/* home route */}
         <Route path="/" element={<Home />} />
 
         {/* student routes */}
-        <Route path="/studentDashboard" element={<StudentDashboard/>}/>
+        <Route path="/studentDashboard" element={<StudentDashboard/>}>
         <Route
-          path="/studentLibrary"
+          path="/studentDashboard"
+          element={<StudentProfile/>}
+        />
+        <Route
+          path="/studentDashboard/studentProfile"
+          element={<StudentProfile/>}
+        />
+        <Route
+          path="/studentDashboard/studentLibrary"
           element={<Library menuOpen={menuOpen} toggleMenu={toggleMenu} />}
         />
+        </Route>
+
+        
         <Route
           path="/librarySubject"
           element={

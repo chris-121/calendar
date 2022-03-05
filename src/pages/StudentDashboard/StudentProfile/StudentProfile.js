@@ -1,6 +1,6 @@
 import React from 'react';
-import './studentprofile.css'
-import img1 from '../Images/img1.jpg'
+import img1 from '../../../images/img1.jpg';
+import './studentprofile.css';
 
 function StudentProfile() {
   return <div className="container">

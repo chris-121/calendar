@@ -1,6 +1,4 @@
 const FourthApi = [
-    // fourht api
-    
     {
         id:1,
         name:"About",

@@ -39,7 +39,10 @@
   "author": "Devesh Nene",
   "license": "ISC",
   "dependencies": {
-    "flowbite": "^1.3.3",
-    "react-icons": "^4.3.1"
+    "flowbite": "^1.3.2",
+    "react-calendar": "^3.7.0",
+    "react-icons": "^4.3.1",
+    "swiper": "^8.0.3",
+    "tw-elements": "^1.0.0-alpha10"
   }
 }

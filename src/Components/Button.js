@@ -13,7 +13,7 @@ const Button = () => {
       <div>
         <button
           type="button"
-          className="text-white bg-orange-500 hover:bg-orange-600 rounded-md  font-medium text-md px-10 py-[9px] text-center my-3 mx-2 "
+          className="text-white bg-orange-500 hover:bg-orange-600 rounded-md  font-medium text-md px-10 py-[9px] text-center my-3 mx-2"
         >
           Subscribe
         </button>
