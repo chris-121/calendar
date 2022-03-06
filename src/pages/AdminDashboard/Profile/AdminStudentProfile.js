@@ -1,7 +1,7 @@
-import React,{useState} from "react";
-import MyApi from "../api/MyApi";
+import React, { useState } from "react";
+import { myApi } from "../../../Api/MyApi";
 const StudentProfile = () => {
-    const [data,setData] = useState(MyApi);
+    const [data,setData] = useState(myApi);
   return (
     <>
       <div class="flex flex-col">

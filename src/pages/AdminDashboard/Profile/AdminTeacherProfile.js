@@ -1,9 +1,9 @@
-import React,{useState} from "react";
-import MyApi from '../api/MyApi'
-import Subject from "../api/Subject";
+import React, { useState } from "react";
+import { myApi } from '../../../Api/MyApi';
+import { subjects } from "../../../Api/Subjects";
 const TeacherProfile = () => {
-  const [data,setData] = useState(MyApi);
-  const [sub,setSub] = useState(Subject);
+  const [data,setData] = useState(myApi);
+  const [sub,setSub] = useState(subjects);
   return (
     <>
       <div class="flex flex-col">

@@ -3,19 +3,19 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../images/logo.png";
 
-export default function TeacherSidebar({sidebarOpen, setSidebarOpen}) {
+export default function AdminSidebar({sidebarOpen, setSidebarOpen}) {
   const menus = [
-    { title: "User Profile", url: "/teacherDashboard/teacherProfile" },
-    { title: "Attendance", url: "/teacherDashboard/teacherAttendance" },
-    { title: "Library", url: "/teacherDashboard/teacherLibrary" },
-    { title: "Assessment", url: "/teacherDashboard/teacherAssessment" },
-    { title: "Live Classes", url: "/teacherLiveClasses" },
-    { title: "Discussions Forums", url: "/teacherDiscussionForums" },
-    { title: "Calendar", url: "/teacherDashboard/teacherCalender" },
-    { title: "Reports", url: "/teacherDashboard/teacherReports" },
-    { title: "Fee Collection", url: "/teacherDashboard/studentFee" },
-    { title: "Documents", url: "/teacherDashboard/teacherDocuments" },
-    { title: "Notices", url: "/teacherNotices" },
+    { title: "User Profile", url: "/adminDashboard/adminProfile" },
+    { title: "Attendance", url: "/adminDashboard/adminAttendance" },
+    { title: "Library", url: "/adminDashboard/adminLibrary" },
+    { title: "Assessment", url: "/adminDashboard/adminAssessment" },
+    { title: "Live Classes", url: "/adminLiveClasses" },
+    { title: "Discussions Forums", url: "/adminDiscussionForums" },
+    { title: "Calendar", url: "/adminDashboard/adminCalender" },
+    { title: "Reports", url: "/adminDashboard/adminReports" },
+    { title: "Fee Collection", url: "/adminDashboard/studentFee" },
+    { title: "Documents", url: "/adminDashboard/adminDocuments" },
+    { title: "Notices", url: "/adminNotices" },
   ];
   return (
     <div>

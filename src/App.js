@@ -11,6 +11,12 @@ import Personal from "./pages/AdminDashboard/Documents/Personal";
 import ClassStatus from "./pages/AdminDashboard/Library/ClassStatus";
 import Completion from "./pages/AdminDashboard/Library/Completion";
 import CreateContent from "./pages/AdminDashboard/Library/CreateContent";
+import AddProfile from "./pages/AdminDashboard/Profile/AddProfile";
+import AdminMyProfile from "./pages/AdminDashboard/Profile/AdminMyProfile";
+import AdminProfile from "./pages/AdminDashboard/Profile/AdminProfile";
+import AdminSchoolProfile from "./pages/AdminDashboard/Profile/AdminSchoolProfile";
+import AdminStudentProfile from "./pages/AdminDashboard/Profile/AdminStudentProfile";
+import AdminTeacherProfile from "./pages/AdminDashboard/Profile/AdminTeacherProfile";
 import CompletedAssessment from "./pages/StudentDashboard/Assessment/CompleteAssesment";
 import StudentAssessment from "./pages/StudentDashboard/Assessment/StudentAssessment";
 import StudentAcademic from "./pages/StudentDashboard/Documents/StudentAcademic";
@@ -46,7 +52,7 @@ function App() {
       
 
         {/* home route */}
-        <Route path="/" element={<TeacherUploadAsses />} />
+        <Route path="/" element={<AdminProfile />} />
 
         {/* student routes */}
         <Route path="/studentDashboard" element={<StudentDashboard/>}>
@@ -119,6 +125,13 @@ function App() {
 
         {/* admin routes */}
           <Route path="/adminDashboard" element={<AdminDashboard/>}>
+            <Route path="/adminDashboard/adminProfile" element={<AdminProfile/>}>
+              <Route path="/adminDashboard/adminProfile/myProfile" element={<AdminMyProfile/>}/>
+              <Route path="/adminDashboard/adminProfile/schoolProfile" element={<AdminSchoolProfile/>}/>
+              <Route path="/adminDashboard/adminProfile/teacherProfile" element={<AdminTeacherProfile/>}/>
+              <Route path="/adminDashboard/adminProfile/studentProfile" element={<AdminStudentProfile/>}/>
+              <Route path="/adminDashboard/adminProfile/adminAddProfile" element={<AddProfile/>}/>
+              </Route>
             
           </Route>
 
