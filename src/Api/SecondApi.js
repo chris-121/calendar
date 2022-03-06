@@ -3,6 +3,7 @@ const SecondApi = [
         id:1,
         image:"img/fb.png",
         link:"",
+        width:30
     }
 
     ,
@@ -10,24 +11,32 @@ const SecondApi = [
     {
         id:2,
         image:"img/insta.png",
-        link:""
+        link:"",
+        width:30
+
     }
 
     ,
     {
       id:3,
       image:"img/linkdin.png",
-      link:""
+      link:"",
+      width:30
+
     }
     ,{
         id:4,
         image:"img/opera.png",
-        link:""
+        link:"",
+        width:30
+
     }
     ,{
         id:5,
         image:"img/twit.png",
-        link:""
+        link:"",
+        width:30
+
     }
 ]
 

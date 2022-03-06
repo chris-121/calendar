@@ -1,15 +1,22 @@
 import "flowbite";
 import { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import AdminEvent from "./Components/adminCalendar/AdminEvent";
 import Navbar from "./Components/Navbar/Navbar";
+import AdminAssessment from "./pages/AdminDashboard/AdminAssessment/AdminAssessment";
+import AdminCompletedAssessmentsHome from "./pages/AdminDashboard/AdminAssessment/AdminCompletedAssessmentsHome";
+import AdminCreateAssessments from "./pages/AdminDashboard/AdminAssessment/AdminCreateAssessment";
+import AdminStudentAssessment from "./pages/AdminDashboard/AdminAssessment/AdminStudentAssessment";
+import AdminTeacherAssessment from "./pages/AdminDashboard/AdminAssessment/AdminTeacherAssessment";
 import AdminCalendar from "./pages/AdminDashboard/AdminCalendar/AdminCalendar";
+import AdminEvent from "./pages/AdminDashboard/AdminCalendar/AdminEvent";
 import AdminDashboard from "./pages/AdminDashboard/AdminDashboard/AdminDashboard";
-import Academic from "./pages/AdminDashboard/Documents/Academic";
-import AddDocument from "./pages/AdminDashboard/Documents/AddDocument";
+import AdminAcademicDocument from "./pages/AdminDashboard/Documents/AdminAcademicDocument";
+import AdminAddDocument from "./pages/AdminDashboard/Documents/AdminAddDocument";
+import AdminAdminstration from "./pages/AdminDashboard/Documents/AdminAdminstration";
 import AdminDocuments from "./pages/AdminDashboard/Documents/AdminDocuments";
-import Adminstration from "./pages/AdminDashboard/Documents/Adminstration";
-import Personal from "./pages/AdminDashboard/Documents/Personal";
+import AdminPersonalDocument from "./pages/AdminDashboard/Documents/AdminPersonalDocument";
+import FeeRecipt from "./pages/AdminDashboard/FeeCollection/FeeRecipt";
+import GenerateDue from "./pages/AdminDashboard/FeeCollection/GenerateDue";
 import AdminLibraryStudentProfile from "./pages/AdminDashboard/Library/AdminLibraryStudentProfile";
 import AdminLibraryTeacherProfile from "./pages/AdminDashboard/Library/AdminLibraryTeacherProfile";
 import ClassStatus from "./pages/AdminDashboard/Library/ClassStatus";
@@ -34,6 +41,7 @@ import StudentDashboard from "./pages/StudentDashboard/StudentDashboard/StudentD
 import StudentFee from "./pages/StudentDashboard/StudentFee/StudentFee";
 import StudentProfile from "./pages/StudentDashboard/StudentProfile/StudentProfile";
 import StudentAssesReport from "./pages/StudentDashboard/StudentReports/StudentAssesReport";
+import StudentReport from "./pages/StudentDashboard/StudentReports/StudentReport";
 import TeacherAssessment from "./pages/TeacherDashboard/Assessment/TeacherAssessment";
 import TeacherCompleteAssesment from "./pages/TeacherDashboard/Assessment/TeacherCompleteAssesment";
 import TeacherUploadAsses from "./pages/TeacherDashboard/Assessment/TeacherUploadAsses";
@@ -55,7 +63,7 @@ function App() {
       
 
         {/* home route */}
-        <Route path="/" element={<AdminProfile />} />
+        <Route path="/" element={<StudentReport />} />
 
         {/* student routes */}
         <Route path="/studentDashboard" element={<StudentDashboard/>}>
@@ -148,6 +156,33 @@ function App() {
             {/* admin calender routes */}
             <Route path="/adminDashboard/adminCalender" element={<AdminCalendar/>}/>
             <Route path="/adminDashboard/AdminEvent" element={<AdminEvent/>}/>
+
+            {/* admin document routes */}
+            <Route path="/adminDashboard/adminDocuments" element={<AdminDocuments/>}>
+              <Route path="/adminDashboard/adminDocuments/adminAcademic" element={<AdminAcademicDocument/>}/>
+              <Route path="/adminDashboard/adminDocuments/adminPersonal" element={<AdminPersonalDocument/>}/>
+              <Route path="/adminDashboard/adminDocuments/adminAdminstration" element={<AdminAdminstration/>}/>
+              <Route path="/adminDashboard/adminDocuments/adminAddDocument" element={<AdminAddDocument/>}/>
+            </Route>
+
+            {/* admin fee collection routes */}
+            <Route path="/adminDashboard/adminFeeCollection" element={<FeeRecipt/>}/>
+            <Route path="/adminDashboard/adminFeeGenerateDue" element={<GenerateDue/>}/>
+
+
+            {/* admin assessment routes */}
+            <Route path="/adminDashboard/adminAssessment" element={<AdminAssessment/>}>
+
+            <Route path="/adminDashboard/adminAssessment/studentAssessment" element={<AdminStudentAssessment/>}/>
+
+            <Route path="/adminDashboard/adminAssessment/teacherAssessment" element={<AdminTeacherAssessment/>}/>
+
+            <Route path="/adminDashboard/adminAssessment/completedAssessment" element={<AdminCompletedAssessmentsHome/>}/>
+
+            <Route path="/adminDashboard/adminAssessment/createAssessment" element={<AdminCreateAssessments/>}/>
+
+              </Route>
+
           </Route>
 
 
@@ -178,13 +213,13 @@ function App() {
         <Route path="/createContent" element={<CreateContent />} />
 
         <Route path="/adminDocuments" element={<AdminDocuments />}>
-          <Route path="/adminDocuments" element={<Academic />} />
-          <Route path="/adminDocuments/personal" element={<Personal />} />
+          <Route path="/adminDocuments" element={<AdminAcademicDocument />} />
+          <Route path="/adminDocuments/personal" element={<AdminPersonalDocument />} />
           <Route
             path="/adminDocuments/adminstration"
-            element={<Adminstration />}
+            element={<AdminAdminstration />}
           />
-          <Route path="/adminDocuments/addDocument" element={<AddDocument />} />
+          <Route path="/adminDocuments/addDocument" element={<AdminAddDocument />} />
         </Route>
 
         

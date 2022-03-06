@@ -13,7 +13,7 @@ export default function AdminSidebar({sidebarOpen, setSidebarOpen}) {
     { title: "Discussions Forums", url: "/adminDiscussionForums" },
     { title: "Calendar", url: "/adminDashboard/adminCalender" },
     { title: "Reports", url: "/adminDashboard/adminReports" },
-    { title: "Fee Collection", url: "/adminDashboard/studentFee" },
+    { title: "Fee Collection", url: "/adminDashboard/adminFeeCollection" },
     { title: "Documents", url: "/adminDashboard/adminDocuments" },
     { title: "Notices", url: "/adminNotices" },
   ];

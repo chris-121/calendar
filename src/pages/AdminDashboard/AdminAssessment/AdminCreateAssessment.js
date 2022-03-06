@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import Filter from "../Filter";
-import { Link } from "react-router-dom";
-import { subjects, classesList, fileTypes } from "../dummyData";
+import { useNavigate } from "react-router-dom";
+import { classesList, fileTypes, subjects } from "../../../Components/dummyData";
+import Filter from "../../../Components/Filter";
 
-export default function CreateAssessments() {
+export default function AdminCreateAssessments() {
+  const navigate = useNavigate()
   const [subjectSelect, setSubjectSelect] = useState("");
   const [fileTypeSelect, setFileTypeSelect] = useState("");
   const [classSelect, setClassSelect] = useState("");
@@ -85,11 +86,11 @@ export default function CreateAssessments() {
             className='text-white bg-gray-800 hover:bg-gray-900 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 my-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-800 dark:border-gray-700'>
             Submit Assessment
           </button>
-          <Link to='/SchoolAdmin/SchoolAdminAssessment/StudentsAssessment'>
-            <button className='bg-yellow-500 hover:bg-yellow-400 transition-colors rounded-[8px] px-[15px] py-[4px] text-white focus:ring-2 ring-yellow-500 ml-8'>
+         
+            <button onClick={() => navigate('/adminDashboard/adminAssessment')} className='bg-yellow-500 hover:bg-yellow-400 transition-colors rounded-[8px] px-[15px] py-[4px] text-white focus:ring-2 ring-yellow-500 ml-8'>
               Go back to Due Assessments
             </button>
-          </Link>
+         
         </div>
       </div>
     </div>

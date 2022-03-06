@@ -4,7 +4,7 @@ import { schoolClasses } from "../../../dummyData";
 import Button from "../../../YIEUI/Button";
 import DocumentTable from "./DocumentTable";
 
-const Academic = () => {
+const AdminAcademicDocument = () => {
   const cols = [
     { id: 1, data: "Academic Document" },
     { id: 2, data: "Link" },
@@ -28,4 +28,4 @@ const Academic = () => {
   );
 };
 
-export default Academic;
+export default AdminAcademicDocument;

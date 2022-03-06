@@ -2,16 +2,16 @@ import React from "react";
 import Button from "../../../YIEUI/Button";
 import DocumentTable from "./DocumentTable";
 
-const Personal = () => {
+const AdminAdminstration = () => {
   const cols = [
     { id: 1, data: "Document" },
     { id: 2, data: "Link" },
   ];
 
   const data = [
-    { id: 1, doc: "Biometric Updation", link: "#" },
-    { id: 2, doc: "Aadhar Card", link: "#" },
-    { id: 3, doc: "Pan Card", link: "#" },
+    { id: 1, doc: "Employment Letters", link: "#" },
+    { id: 2, doc: "Tax Forms", link: "#" },
+    { id: 3, doc: "Joining Letters", link: "#" },
   ];
   return (
     <div className="w-3/4 mx-auto mt-5">
@@ -32,4 +32,4 @@ const Personal = () => {
   );
 };
 
-export default Personal;
+export default AdminAdminstration;

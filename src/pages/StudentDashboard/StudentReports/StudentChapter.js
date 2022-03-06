@@ -1,6 +1,6 @@
 import React from "react";
-import StudentAssesReportApi from "../../StudentApi/StudentAssesReportApi";
-import { useParams, Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import StudentAssesReportApi from "../../../StudentApi/StudentAssesReportApi";
 const StudentChapter = () => {
   const { chapter } = useParams();
 

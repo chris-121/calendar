@@ -1,9 +1,8 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
-import { useNavigate, Link } from "react-router-dom";
 
-const CompletedAssessment = () => {
+const AdminCompletedAssessment = () => {
   let navigate = useNavigate();
   const [students, setStudents] = useState([
     {
@@ -152,4 +151,4 @@ const CompletedAssessment = () => {
   );
 };
 
-export default CompletedAssessment;
+export default AdminCompletedAssessment;

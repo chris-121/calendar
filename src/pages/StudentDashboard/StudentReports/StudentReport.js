@@ -1,14 +1,11 @@
 import React from "react";
-import firstApi from "../../StudentApi/firstApi";
-import SecondApi from "../../StudentApi/SecondApi";
 import { Link } from "react-router-dom";
-const Student = () => {
+import FirstApi from "../../../Api/FirstApi";
+import SecondApi from "../../../Api/SecondApi";
+const StudentReport = () => {
   return (
-    <div className="border border-black w-[85%] block my-2 mx-auto lg:w-[62%] ">
+    <div className="border border-black block my-2 mx-auto  ">
       <div className="my-2">
-        <h1 className="text-center font-bold mb-3 text-xl ">
-          Student Dashborad
-        </h1>
 
         <div className="flex flex-col mx-5">
           <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -38,7 +35,7 @@ const Student = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    {firstApi.map((val) => {
+                    {FirstApi.map((val) => {
                       return (
                         <>
                           <tr
@@ -55,13 +52,13 @@ const Student = () => {
                                 <div className="w-full bg-gray-200 rounded-full h-2.5">
                                   <div
                                     className="bg-gray-600 h-2.5 rounded-full"
-                                    style={{ width: val.aggregate.width }}
+                                    style={{ width: val.width }}
                                   >
                                     {" "}
                                   </div>
                                 </div>
                                 <p className=" relative top-[-4px] mx-2">
-                                  {val.aggregate.text}
+                                  {val.text}
                                 </p>
                               </div>
                             </td>
@@ -93,7 +90,7 @@ const Student = () => {
                 <h1 className=" font-bold relative top-[-4px]">
                  {val.name}
                 </h1>
-                <div className="w-[30%] bg-gray-200 rounded-full h-5 mx-1">
+                <div className=" bg-gray-200 rounded-full h-5 mx-1">
                   <div
                     className="bg-gray-600 h-5 rounded-full mx-1"
                     style={{ width: val.width }}
@@ -110,4 +107,4 @@ const Student = () => {
   );
 };
 
-export default Student;
+export default StudentReport;

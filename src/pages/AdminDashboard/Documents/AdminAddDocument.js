@@ -3,7 +3,7 @@ import SelectInput from "../../../Components/SelectInput";
 import { departments, schoolClasses } from "../../../dummyData";
 import Button from "../../../YIEUI/Button";
 
-const AddDocument = () => {
+const AdminAddDocument = () => {
   return (
     <div className="bg-pink-400">
       <div className="w-3/4 mx-auto py-5">
@@ -60,4 +60,4 @@ const AddDocument = () => {
   );
 };
 
-export default AddDocument;
+export default AdminAddDocument;

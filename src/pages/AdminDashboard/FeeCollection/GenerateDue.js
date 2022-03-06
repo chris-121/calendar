@@ -1,7 +1,9 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-function FeeRecipt2() {
+function GenerateDue() {
+    // hooks
+    const navigate = useNavigate();
 
     // data
     const data2 = [
@@ -47,11 +49,7 @@ function FeeRecipt2() {
       )
     });
 
-    let navigate = useNavigate();
-    const backPage = ()=>{
-        let path = "/"
-        navigate(path);
-    }
+    
 
   return (
     <div>
@@ -92,7 +90,7 @@ function FeeRecipt2() {
     </div>
 </div>
 
-<button type="button" onClick={backPage} class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ml-5 pr-5 pl-5" >Back</button>
+<button type="button" onClick={() => navigate('/adminDashboard/adminFeeCollection')} class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ml-5 pr-5 pl-5" >Back</button>
 
 
         </div>
@@ -100,4 +98,4 @@ function FeeRecipt2() {
   )
 }
 
-export default FeeRecipt2
+export default GenerateDue

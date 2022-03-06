@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { completedAssessmentsdata } from "../dummyData";
-const CompletedAssessmentsHome = () => {
+import { Link, useNavigate } from "react-router-dom";
+import { completedAssessmentsdata } from "../../../Components/dummyData";
+const AdminCompletedAssessmentsHome = () => {
+  const navigate = useNavigate();
   const bodyTable = completedAssessmentsdata.map((data) => {
     return (
       <>
@@ -88,14 +89,13 @@ const CompletedAssessmentsHome = () => {
           </div>
         </div>
       </div>
-      <Link to='/SchoolAdmin/SchoolAdminAssessment/StudentsAssessment'>
-        <button className='bg-yellow-500 hover:bg-yellow-400 transition-colors rounded-[8px] px-[15px] py-[4px] text-white focus:ring-2 ring-yellow-500 ml-8'>
+     
+        <button onClick={() => navigate('/adminDashboard/adminAssessment')} className='bg-yellow-500 hover:bg-yellow-400 transition-colors rounded-[8px] px-[15px] py-[4px] text-white focus:ring-2 ring-yellow-500 ml-8'>
           Go back to Due Assessments
         </button>
-      </Link>
     </div>
   );
   s;
 };
 
-export default CompletedAssessmentsHome;
+export default AdminCompletedAssessmentsHome;
