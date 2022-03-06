@@ -62,7 +62,7 @@ const ClassStatus = () => {
               <p>Teacher: Lorem Ipsum</p>
               <p className="inline-block mr-10">Teacher Content profile</p>
               <Button
-                onClick={() => navigate("/teacherStatus")}
+                onClick={() => navigate("/adminDashboard/teacherProfile")}
                 classes="inline-block"
                 variant="filter"
               >
@@ -88,7 +88,7 @@ const ClassStatus = () => {
             <SelectInput values={schoolClasses} />
             <SelectInput values={subjects} />
             <SelectInput values={sections} />
-            <Button classes="mt-4" variant="outlined">
+            <Button onClick={() => navigate('/adminDashboard/studentProfile')} classes="mt-4" variant="outlined">
               Get Student Profile
             </Button>
           </div>

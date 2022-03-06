@@ -21,7 +21,7 @@ export default function AdminSidebar({sidebarOpen, setSidebarOpen}) {
     <div>
       {/* sidebar toggler icon */}
    <div className="p-5 text-4xl ">
-   <AiOutlineMenu onClick={() => sidebarOpen === false ? setSidebarOpen(true):setSidebarOpen(false)}/>
+   <AiOutlineMenu className="cursor-pointer" onClick={() => sidebarOpen === false ? setSidebarOpen(true):setSidebarOpen(false)}/>
    </div>
       {/* sidebar */}
       <div

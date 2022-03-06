@@ -17,7 +17,7 @@ const LibraryFilter = ({ classes }) => {
       <SelectInput values={subjects} />
 
       <Button
-        onClick={() => navigate("/classStatus")}
+        onClick={() => navigate("/adminDashboard/classStatus")}
         classes="mt-6 mb-2"
         variant="secondary"
       >

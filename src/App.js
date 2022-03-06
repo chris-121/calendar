@@ -1,13 +1,17 @@
 import "flowbite";
 import { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import AdminEvent from "./Components/adminCalendar/AdminEvent";
 import Navbar from "./Components/Navbar/Navbar";
+import AdminCalendar from "./pages/AdminDashboard/AdminCalendar/AdminCalendar";
 import AdminDashboard from "./pages/AdminDashboard/AdminDashboard/AdminDashboard";
 import Academic from "./pages/AdminDashboard/Documents/Academic";
 import AddDocument from "./pages/AdminDashboard/Documents/AddDocument";
 import AdminDocuments from "./pages/AdminDashboard/Documents/AdminDocuments";
 import Adminstration from "./pages/AdminDashboard/Documents/Adminstration";
 import Personal from "./pages/AdminDashboard/Documents/Personal";
+import AdminLibraryStudentProfile from "./pages/AdminDashboard/Library/AdminLibraryStudentProfile";
+import AdminLibraryTeacherProfile from "./pages/AdminDashboard/Library/AdminLibraryTeacherProfile";
 import ClassStatus from "./pages/AdminDashboard/Library/ClassStatus";
 import Completion from "./pages/AdminDashboard/Library/Completion";
 import CreateContent from "./pages/AdminDashboard/Library/CreateContent";
@@ -39,7 +43,6 @@ import TeacherAdminstration from "./pages/TeacherDashboard/TeacherDocuments/Teac
 import TeacherDocuments from "./pages/TeacherDashboard/TeacherDocuments/TeacherDocuments";
 import TeacherPersonal from "./pages/TeacherDashboard/TeacherDocuments/TeacherPersonal";
 import TeacherProfile from "./pages/TeacherDashboard/TeacherProfile/TeacherProfile";
-
 function App() {
   const [menuOpen, setMenuOpen] = useState(true);
   const toggleMenu = () => {
@@ -125,14 +128,26 @@ function App() {
 
         {/* admin routes */}
           <Route path="/adminDashboard" element={<AdminDashboard/>}>
+
+{/* admin profile routes */}
             <Route path="/adminDashboard/adminProfile" element={<AdminProfile/>}>
+
               <Route path="/adminDashboard/adminProfile/myProfile" element={<AdminMyProfile/>}/>
               <Route path="/adminDashboard/adminProfile/schoolProfile" element={<AdminSchoolProfile/>}/>
               <Route path="/adminDashboard/adminProfile/teacherProfile" element={<AdminTeacherProfile/>}/>
               <Route path="/adminDashboard/adminProfile/studentProfile" element={<AdminStudentProfile/>}/>
               <Route path="/adminDashboard/adminProfile/adminAddProfile" element={<AddProfile/>}/>
               </Route>
+
+{/* admin library routes */}
+            <Route path="/adminDashboard/adminLibrary" element={<Completion/>}/>
+            <Route path="/adminDashboard/classStatus" element={<ClassStatus/>}/>
+            <Route path="/adminDashboard/studentProfile" element={<AdminLibraryStudentProfile/>}/>
+            <Route path="/adminDashboard/teacherProfile" element={<AdminLibraryTeacherProfile/>}/>
             
+            {/* admin calender routes */}
+            <Route path="/adminDashboard/adminCalender" element={<AdminCalendar/>}/>
+            <Route path="/adminDashboard/AdminEvent" element={<AdminEvent/>}/>
           </Route>
 
 

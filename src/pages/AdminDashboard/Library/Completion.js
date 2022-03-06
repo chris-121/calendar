@@ -2,7 +2,6 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import LibraryFilter from "../../../Components/LibraryFilter";
 import SelectInput from "../../../Components/SelectInput";
-import Sidebar from "../../../Components/Sidebar";
 import Button from "../../../YIEUI/Button";
 import ShowCompletionData from "./ShowCompletionData";
 
@@ -93,7 +92,7 @@ const Completion = ({ menuOpen }) => {
 
   return (
     <div className="flex p-5">
-      <Sidebar classes="md:hidden" menuOpen={menuOpen} />
+    
 
       <div className="w-2/3 mr-4">
         <div className=" grid grid-cols-2 gap-4 ">

@@ -1,9 +1,9 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import CalendarComponent from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
-import { Link, Outlet } from "react-router-dom";
-import "../calendar.css";
-import axios from 'axios';
+import { Link } from "react-router-dom";
+import "./calendar.css";
 
 function AdminCalendar(){
 
@@ -51,7 +51,7 @@ function AdminCalendar(){
                         type="button"
                         className="text-white bg-blue-500 hover:text-black-200 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-3 py-2.5 text-center mr-2 my-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-800 dark:border-gray-700"
                     >
-                       <Link to="admin-calendar">Create Event</Link>
+                       <Link to="/adminDashboard/AdminEvent">Create Event</Link>
                     </button>
                     <button
                         type="button"
@@ -60,7 +60,6 @@ function AdminCalendar(){
                        Individual Alert
                     </button>
                     </div>
-                    <Outlet />
                     </div>
                     </form>
                 </section>
