@@ -28,6 +28,7 @@ import AdminProfile from "./pages/AdminDashboard/Profile/AdminProfile";
 import AdminSchoolProfile from "./pages/AdminDashboard/Profile/AdminSchoolProfile";
 import AdminStudentProfile from "./pages/AdminDashboard/Profile/AdminStudentProfile";
 import AdminTeacherProfile from "./pages/AdminDashboard/Profile/AdminTeacherProfile";
+import Home from "./pages/Home";
 import CompletedAssessment from "./pages/StudentDashboard/Assessment/CompleteAssesment";
 import StudentAssessment from "./pages/StudentDashboard/Assessment/StudentAssessment";
 import StudentAcademic from "./pages/StudentDashboard/Documents/StudentAcademic";
@@ -41,7 +42,6 @@ import StudentDashboard from "./pages/StudentDashboard/StudentDashboard/StudentD
 import StudentFee from "./pages/StudentDashboard/StudentFee/StudentFee";
 import StudentProfile from "./pages/StudentDashboard/StudentProfile/StudentProfile";
 import StudentAssesReport from "./pages/StudentDashboard/StudentReports/StudentAssesReport";
-import StudentReport from "./pages/StudentDashboard/StudentReports/StudentReport";
 import TeacherAssessment from "./pages/TeacherDashboard/Assessment/TeacherAssessment";
 import TeacherCompleteAssesment from "./pages/TeacherDashboard/Assessment/TeacherCompleteAssesment";
 import TeacherUploadAsses from "./pages/TeacherDashboard/Assessment/TeacherUploadAsses";
@@ -63,7 +63,7 @@ function App() {
       
 
         {/* home route */}
-        <Route path="/" element={<StudentReport />} />
+        <Route path="/" element={<Home />} />
 
         {/* student routes */}
         <Route path="/studentDashboard" element={<StudentDashboard/>}>
