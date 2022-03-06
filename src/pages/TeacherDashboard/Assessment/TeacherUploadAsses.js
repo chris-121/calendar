@@ -1,6 +1,6 @@
-import React,{useState} from 'react'
-import FirstApi from '../../Api/FirstApi'
-import SecondApi from '../../Api/SecondApi';
+import React, { useState } from 'react';
+import FirstApi from '../../../Api/FirstApi';
+import SecondApi from '../../../Api/SecondApi';
 import Upload from './Upload';
 const TeacherUploadAsses = ({upload,admin}) => {
     const [data,setData] = useState(FirstApi);

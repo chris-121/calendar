@@ -1,7 +1,7 @@
-import React,{useState} from "react";
-import { useParams,Link } from "react-router-dom";
-import TeacherMenu from "./TeacherMenu";
+import React, { useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import TeacherAssesmentEveluationApi from "../../TeacherApi/TeacherAssesmentEveluationApi";
+import TeacherMenu from "./TeacherMenu";
 const AssesmentEveluationDetail = () => {
   const [subject,setSubject] = useState('');
   const [quiz,setQuiz] = useState('');

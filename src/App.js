@@ -2,6 +2,7 @@ import "flowbite";
 import { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
+import AdminDashboard from "./pages/AdminDashboard/AdminDashboard/AdminDashboard";
 import Academic from "./pages/AdminDashboard/Documents/Academic";
 import AddDocument from "./pages/AdminDashboard/Documents/AddDocument";
 import AdminDocuments from "./pages/AdminDashboard/Documents/AdminDocuments";
@@ -10,8 +11,6 @@ import Personal from "./pages/AdminDashboard/Documents/Personal";
 import ClassStatus from "./pages/AdminDashboard/Library/ClassStatus";
 import Completion from "./pages/AdminDashboard/Library/Completion";
 import CreateContent from "./pages/AdminDashboard/Library/CreateContent";
-import TeacherProfile from "./pages/AdminDashboard/Library/TeacherProfile";
-import Home from "./pages/Home";
 import CompletedAssessment from "./pages/StudentDashboard/Assessment/CompleteAssesment";
 import StudentAssessment from "./pages/StudentDashboard/Assessment/StudentAssessment";
 import StudentAcademic from "./pages/StudentDashboard/Documents/StudentAcademic";
@@ -25,10 +24,16 @@ import StudentDashboard from "./pages/StudentDashboard/StudentDashboard/StudentD
 import StudentFee from "./pages/StudentDashboard/StudentFee/StudentFee";
 import StudentProfile from "./pages/StudentDashboard/StudentProfile/StudentProfile";
 import StudentAssesReport from "./pages/StudentDashboard/StudentReports/StudentAssesReport";
+import TeacherAssessment from "./pages/TeacherDashboard/Assessment/TeacherAssessment";
+import TeacherCompleteAssesment from "./pages/TeacherDashboard/Assessment/TeacherCompleteAssesment";
+import TeacherUploadAsses from "./pages/TeacherDashboard/Assessment/TeacherUploadAsses";
+import TeacherDashboard from "./pages/TeacherDashboard/TeacherDashboard/TeacherDashboard";
 import TeacherAcademic from "./pages/TeacherDashboard/TeacherDocuments/TeacherAcademic";
 import TeacherAdminstration from "./pages/TeacherDashboard/TeacherDocuments/TeacherAdminstration";
 import TeacherDocuments from "./pages/TeacherDashboard/TeacherDocuments/TeacherDocuments";
 import TeacherPersonal from "./pages/TeacherDashboard/TeacherDocuments/TeacherPersonal";
+import TeacherProfile from "./pages/TeacherDashboard/TeacherProfile/TeacherProfile";
+
 function App() {
   const [menuOpen, setMenuOpen] = useState(true);
   const toggleMenu = () => {
@@ -41,7 +46,7 @@ function App() {
       
 
         {/* home route */}
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<TeacherUploadAsses />} />
 
         {/* student routes */}
         <Route path="/studentDashboard" element={<StudentDashboard/>}>
@@ -92,6 +97,33 @@ function App() {
           />
           </Route>
         </Route>
+
+        {/* teacher routes */}
+        <Route path="/teacherDashboard" element={<TeacherDashboard/>}>
+        <Route path='/teacherDashboard/teacherProfile' element={<TeacherProfile/>}/>
+        <Route path='/teacherDashboard/teacherAssessment' element={<TeacherAssessment/>} />
+           
+          <Route path="/teacherDashboard/teacherAssessment/teacherCompleteAssessment"
+            element={<TeacherCompleteAssesment/>}/>
+
+          <Route path="/teacherDashboard/teacherAssessment/teacherCreateAssessment"
+            element={<TeacherUploadAsses/>}/>
+            
+          <Route path="/teacherDashboard/teacherDocuments"
+            element={<TeacherDocuments/>}>
+                <Route path="/teacherDashboard/teacherDocuments/academic" element={<TeacherAcademic/>}/>
+                <Route path="/teacherDashboard/teacherDocuments/personal" element={<TeacherPersonal/>}/>
+                <Route path="/teacherDashboard/teacherDocuments/adminstration" element={<TeacherAdminstration/>}/>
+              </Route>
+        </Route>
+
+        {/* admin routes */}
+          <Route path="/adminDashboard" element={<AdminDashboard/>}>
+            
+          </Route>
+
+
+        {/* other routes */}
 
         
         <Route

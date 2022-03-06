@@ -8,19 +8,19 @@ const DocumentNavigation = () => {
     <div class="flex pt-5  mx-auto w-3/4 justify-center mb-5" role="group">
       <Button
         variant="navigation"
-        onClick={() => navigate("/teacherDocuments")}
+        onClick={() => navigate("/teacherDashboard/teacherDocuments/academic")}
       >
         Academic
       </Button>
       <Button
         variant="navigation"
-        onClick={() => navigate("/teacherDocuments/personal")}
+        onClick={() => navigate("/teacherDashboard/teacherDocuments/personal")}
       >
         Personal
       </Button>
       <Button
         variant="navigation"
-        onClick={() => navigate("/teacherDocuments/adminstration")}
+        onClick={() => navigate("/teacherDashboard/teacherDocuments/adminstration")}
       >
         Adminstration
       </Button>

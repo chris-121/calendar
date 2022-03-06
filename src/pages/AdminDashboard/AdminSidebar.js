@@ -9,7 +9,7 @@ export default function TeacherSidebar({sidebarOpen, setSidebarOpen}) {
     { title: "Attendance", url: "/teacherDashboard/teacherAttendance" },
     { title: "Library", url: "/teacherDashboard/teacherLibrary" },
     { title: "Assessment", url: "/teacherDashboard/teacherAssessment" },
-    { title: "Live Class", url: "/teacherLiveClasses" },
+    { title: "Live Classes", url: "/teacherLiveClasses" },
     { title: "Discussions Forums", url: "/teacherDiscussionForums" },
     { title: "Calendar", url: "/teacherDashboard/teacherCalender" },
     { title: "Reports", url: "/teacherDashboard/teacherReports" },

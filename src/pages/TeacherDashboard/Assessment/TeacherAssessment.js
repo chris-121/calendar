@@ -1,13 +1,13 @@
 import React, { useState } from "react";
+import { teacherApi } from "../../../Api/TeacherApi";
 import TeacherButton from "./TeacherButton";
-import TeacherApi from "../../teacherApi/TeacherApi";
 const Teacher = () => {
-  const [data, setData] = useState(TeacherApi);
+  const [data, setData] = useState(teacherApi);
   return (
     <div className="border border-black w-[85%] block my-2 mx-auto lg:w-[62%] ">
       <div className="my-4">
         <h1 className="text-center font-bold mb-3 text-lg ">
-          Teacher Dashborad{" "}
+          Teacher Dashborad
         </h1>
 
         <div className=" flex items-center justify-between mb-2">
@@ -80,7 +80,7 @@ const Teacher = () => {
                                 className=" text-blue-500"
                                 href=""
                               >
-                                {val.assesment}
+                                {val.assessment}
                               </a>
                             </td>
                           </tr>

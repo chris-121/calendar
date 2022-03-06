@@ -1,7 +1,7 @@
 import React from "react";
-import TeacherMenu from "./TeacherMenu";
+import { Link } from "react-router-dom";
 import TeacherAssesmentEveluationApi from "../../TeacherApi/TeacherAssesmentEveluationApi";
-import { Link} from "react-router-dom";
+import TeacherMenu from "./TeacherMenu";
 const AssementEveluation = () => {
   return (
     <div className="border border-black w-[85%] block my-2 mx-auto lg:w-[62%] ">

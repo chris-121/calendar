@@ -1,13 +1,13 @@
-import React from 'react'
-import {Routes,Route} from 'react-router-dom';
-import TeacherClassEve from './TeacherClassEve';
-import TeacherMainEveluation from './TeacherMainEveluation';
-import AttendenceEveluation from './AttendenceEveluation';
-import AssementEveluation from './AssementEveluation';
-import QuizeEveluation from './QuizeEveluation';
-import OverallEveluation from './OverallEveluation';
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import AssementEveluation from '../../Components/TeacherEveluation/AssementEveluation';
+import AssesmentEveluationDetail from '../../Components/TeacherEveluation/AssesmentEveluationDetail';
+import AttendenceEveluation from '../../Components/TeacherEveluation/AttendenceEveluation';
+import OverallEveluation from '../../Components/TeacherEveluation/OverallEveluation';
+import QuizeEveluation from '../../Components/TeacherEveluation/QuizeEveluation';
+import TeacherClassEve from '../../Components/TeacherEveluation/TeacherClassEve';
+import TeacherMainEveluation from '../../Components/TeacherEveluation/TeacherMainEveluation';
 
-import AssesmentEveluationDetail from './AssesmentEveluationDetail';
 const TeacherRouter = () => {
   return (
     <>

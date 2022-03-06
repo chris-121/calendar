@@ -1,9 +1,9 @@
-import React,{useState} from 'react';
-import TeacherCompleteAssesApi from '../../teacherApi/TeacherCompleteAssesApi';
-import TeacherCompleteAssesButton from './TeacherCompleteAssesButton';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { teacherCompleteAssesApi } from '../../../Api/TeacherCompleteAssesApi';
+import TeacherCompleteAssesButton from './TeacherCompleteAssesButton';
 const TeacherCompleteAssesment = () => {
-    const [data, setData] = useState(TeacherCompleteAssesApi);
+    const [data, setData] = useState(teacherCompleteAssesApi);
     return (
       <div className="border border-black w-[85%] block my-2 mx-auto lg:w-[62%] ">
         <div className="my-4">

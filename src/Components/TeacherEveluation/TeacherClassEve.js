@@ -1,8 +1,8 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import selectClassApi from "../../TeacherApi/selectClassApi";
 import selectSubjectApi from "../../TeacherApi/selectSubjectApi";
 import TeacherAggregateApi from "../../TeacherApi/TeacherAggregateApi";
-import {Link} from 'react-router-dom'
 const TeacherClassEve = () => {
   return (
     <div className="border border-black w-[85%] block my-2 mx-auto lg:w-[62%] ">
