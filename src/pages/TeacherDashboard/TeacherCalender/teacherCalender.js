@@ -5,7 +5,7 @@ import 'react-calendar/dist/Calendar.css';
 import { Link } from "react-router-dom";
 import "./calendar.css";
 
-function AdminCalendar(){
+function TeacherCalendar(){
 
     const [date, setDate] = useState(new Date());
     const [input, setInput] = useState({ dateTime: ""});
@@ -30,7 +30,7 @@ function AdminCalendar(){
     }
     return (
     <div className="w-full bg-gray-200">
-        <h1 className="text-3xl mt-4 text-center base">Admin Calendar</h1>
+        <h1 className="text-3xl mt-4 text-center base">Teacher Calendar</h1>
         <div className="flex  border-2 p-10 border-green w-full">
             <div className="flex flex-col">
                 <CalendarComponent className="calendar" onChange={handleChange} value={date} />
@@ -51,13 +51,7 @@ function AdminCalendar(){
                         type="button"
                         className="text-white bg-blue-500 hover:text-black-200 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-3 py-2.5 text-center mr-2 my-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-800 dark:border-gray-700"
                     >
-                       <Link to="/adminDashboard/AdminEvent">Create Event</Link>
-                    </button>
-                    <button
-                        type="button"
-                        className="text-white bg-blue-500 hover:text-black-200 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-3 py-2.5 text-center mr-2 my-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-800 dark:border-gray-700"
-                    >
-                       <Link to="/adminDashboard/AdminEvent">Individual Alert</Link>
+                       <Link to="/teacherDashboard/CreateEvent">Create Event</Link>
                     </button>
                     </div>
                     </div>
@@ -69,4 +63,4 @@ function AdminCalendar(){
     )
 }
 
-export default AdminCalendar;
+export default TeacherCalendar;

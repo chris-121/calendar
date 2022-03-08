@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import 'react-calendar/dist/Calendar.css';
 import "./calendar.css";
-const AdminEvent = () => {
-    const [input, setInput] = useState({ className: "",section: "", event: "", dateTime: ""});
+const TeacherEvent = () => {
+    const [input, setInput] = useState({ className: "", event: "", dateTime: ""});
 
     // funcction that allow you to intaract with forms  
     const handleChange = (e) => {
@@ -26,7 +26,7 @@ const AdminEvent = () => {
             }
             alert('successfully created!')
             console.log(res.data)
-            setInput({ className: "", section: "",event: "", dateTime: "" });
+            setInput({ className: "",event: "", dateTime: "" });
         });
     }
 
@@ -45,17 +45,6 @@ const AdminEvent = () => {
                             <option value="2">class 2</option>
                             <option value="3">class 3</option>
                             <option value="4">class 4</option>
-                        </select>
-                        <select name="select_section" 
-                        className=" w-64 mb-2
-                        bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
-                        id='section' value={input.section}
-                            onChange={handleChange}
-                        >
-                            <option>Select section</option>
-                            <option value="A">A</option>
-                            <option value="B">B</option>
-                            <option value="C">C</option>
                         </select>
                         <select name="select_event" 
                         className=" w-64 mb-2
@@ -100,12 +89,12 @@ const AdminEvent = () => {
                             type="button"
                             className="text-white bg-blue-500 hover:text-black-200 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 my-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-800 dark:border-gray-700"
                         >
-                            <Link to="/adminDashboard/adminCalender">Back</Link>
+                            <Link to="/teacherDashboard/teacherCalender">Back</Link>
                         </button>
                     </div>
                 </form>
         </>
-    )
+    ) 
 }
 
-export default AdminEvent;
+export default TeacherEvent;

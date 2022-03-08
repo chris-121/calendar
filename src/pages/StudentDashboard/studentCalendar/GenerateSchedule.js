@@ -49,7 +49,7 @@ const GenerateSchedule = () => {
                             type="button"
                             className="text-white bg-blue-500 hover:text-black-200 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 my-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-800 dark:border-gray-700"
                         >
-                            <Link to="/calendar1">Back</Link>
+                            <Link to="/studentDashboard/studentCalender">Back</Link>
                         </button>
                     </div>
                 </form>

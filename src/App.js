@@ -38,6 +38,7 @@ import StudentPersonal from "./pages/StudentDashboard/Documents/StudentPersonal"
 import Library from "./pages/StudentDashboard/Library/Library";
 import LibrarySubject from "./pages/StudentDashboard/Library/LibrarySubject";
 import StudentCalendar from "./pages/StudentDashboard/studentCalendar/StudentCalendar";
+import GenerateSchedule from "./pages/StudentDashboard/studentCalendar/GenerateSchedule";
 import StudentDashboard from "./pages/StudentDashboard/StudentDashboard/StudentDashboard";
 import StudentFee from "./pages/StudentDashboard/StudentFee/StudentFee";
 import StudentProfile from "./pages/StudentDashboard/StudentProfile/StudentProfile";
@@ -51,6 +52,8 @@ import TeacherAdminstration from "./pages/TeacherDashboard/TeacherDocuments/Teac
 import TeacherDocuments from "./pages/TeacherDashboard/TeacherDocuments/TeacherDocuments";
 import TeacherPersonal from "./pages/TeacherDashboard/TeacherDocuments/TeacherPersonal";
 import TeacherProfile from "./pages/TeacherDashboard/TeacherProfile/TeacherProfile";
+import TeacherCalender from "./pages/TeacherDashboard/TeacherCalender/teacherCalender";
+import TeacherEvent from "./pages/TeacherDashboard/TeacherCalender/calenderEvent";
 function App() {
   const [menuOpen, setMenuOpen] = useState(true);
   const toggleMenu = () => {
@@ -92,6 +95,10 @@ function App() {
           element={<StudentCalendar />}
         />
         <Route
+          path="/studentDashboard/GenerateSchedule"
+          element={<GenerateSchedule />}
+        />
+        <Route
           path="/studentDashboard/studentAccessReport"
           element={<StudentAssesReport />}
         />
@@ -125,7 +132,10 @@ function App() {
 
           <Route path="/teacherDashboard/teacherAssessment/teacherCreateAssessment"
             element={<TeacherUploadAsses/>}/>
-            
+            <Route path="/teacherDashboard/teacherCalender"
+            element={<TeacherCalender/>}/>
+            <Route path="/teacherDashboard/CreateEvent"
+            element={<TeacherEvent/>}/>            
           <Route path="/teacherDashboard/teacherDocuments"
             element={<TeacherDocuments/>}>
                 <Route path="/teacherDashboard/teacherDocuments/academic" element={<TeacherAcademic/>}/>
